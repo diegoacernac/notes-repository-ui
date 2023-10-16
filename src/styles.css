@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+ */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(75,14,154,1) 35%, rgba(0,212,255,1) 100%);
+   */
+  margin: 0;
+  background: #44426E;
+}

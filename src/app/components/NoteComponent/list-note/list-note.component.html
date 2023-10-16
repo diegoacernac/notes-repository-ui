@@ -1,0 +1,75 @@
+<body>
+  <div class="container py-3">
+    <header>
+      <div class="title-1 d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        <span class="fs-4">
+          Lista de Notas
+        </span>
+
+        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+          <button type="button" class="btn-custom" (click)="viewProfile()">
+            Ver Usuario
+          </button>&nbsp;&nbsp;&nbsp;
+          <button type="button" class="btn-custom" (click)="signOut()">
+            Cerrar Sesión
+          </button>
+        </nav>
+      </div>
+
+      <div class="title-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="title display-4 fw-normal">
+          Que bueno verte de nuevo, {{ user }}.
+        </h1>
+        <p class="sub-title fs-5">
+          Dime, ¿en qué piensas ahora?
+          <button type="button" class="writte-btn" (click)="addNote()">
+            Escríbelo!
+          </button>
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="note" *ngFor="let note of notesArray">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3 d-flex justify-content-between">
+              <span class="date badge rounded-pill">
+                {{ note.registerDate | date: 'dd/MM/yyyy' }}
+              </span>
+              <span class="category badge rounded-pill">
+                {{ note.category.name }}
+              </span>
+            </div>
+            <div class="card-body">
+              <h2 class="titleNote">
+                {{ note.title }}
+              </h2>
+
+              <div style="height: 150px; overflow: hidden;">
+                <p class="titleBody">
+                  {{ note.body }}
+                </p>
+              </div>
+
+              <div class="row">
+                <div class="d-flex justify-content-center align-items-center">
+                  <button type="submit" class="btn btn-cst-view btn-sm rounded" (click)="viewNote(note.id)">
+                    Ver
+                  </button>&nbsp;
+                  <button type="submit" class="btn btn-cst-edit btn-sm rounded">
+                    Editar
+                  </button>&nbsp;
+                  <button type="submit" class="btn btn-cst-delete btn-sm rounded" (click)="deleteNote(note.id)">
+                    Eliminar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+

@@ -1,0 +1,33 @@
+<body>
+  <div class="container-fluid">
+    <form [formGroup]="loginForm" class="mx-auto">
+      <h4 class="text-center">
+        Hola, Inicia Sesión
+      </h4>
+
+      <div class="mb-3 mt-5">
+        <label for="emailFor" class="form-label">
+          Usuario
+        </label>
+        <input type="email" class="form-control" formControlName="email" id="emailId" autocomplete="nope">
+      </div>
+
+      <div class="mb-3">
+        <label for="passwordFor" class="form-label">
+          Contraseña
+        </label>
+        <input type="password" class="form-control" formControlName="password" id="passwordId">
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-5" (click)="login()" [disabled]="!loginForm.valid">
+        Inicia Sesión
+      </button>
+      <p class="mt-4 text-sm text-center">
+        ¿No tienes cuenta?
+        <button type="button" class="register-btn" (click)="registerUser()">
+          Regístrate
+        </button>
+      </p>
+    </form>
+  </div>
+</body>

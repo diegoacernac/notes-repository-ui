@@ -1,0 +1,46 @@
+<body>
+  <div class="container-fluid">
+    <form [formGroup]="registerForm" class="mx-auto">
+      <h4 class="text-center">
+        Registro
+      </h4>
+
+      <div class="mb-3 mt-5">
+        <label for="nameFor" class="form-label">
+          Nombres:
+        </label>
+        <input type="text" class="form-control" formControlName="name">
+      </div>
+
+      <div class="mb-3 mt-5">
+        <label for="lastNameFor" class="form-label">
+          Apellidos:
+        </label>
+        <input type="text" class="form-control" formControlName="lastName">
+      </div>
+
+      <div class="mb-3 mt-5">
+        <label for="emailFor" class="form-label">
+          Correo:
+        </label>
+        <input type="email" class="form-control" formControlName="email">
+      </div>
+
+      <div class="mb-3 mt-5">
+        <label for="passwordFor" class="form-label">
+          Contraseña:
+        </label>
+        <input type="password" class="form-control" formControlName="password">
+      </div>
+
+      <div class="buttons mb-3 mt-5">
+        <button type="submit" class="btn btn-danger py-2 px-4 rounded" (click)="back()" style="flex: 1;">
+          Cancelar
+        </button>&nbsp;
+        <button type="submit" class="btn btn-primary py-2 px-4 rounded" (click)="save()" [disabled]="!registerForm.valid" style="flex: 1;">
+          Guardar
+        </button>
+      </div>
+    </form>
+  </div>
+</body>
