@@ -1,0 +1,79 @@
+<body>
+  <div class="container-fluid">
+    <form [formGroup]="noteForm" class="mx-auto">
+      <h4 class="text-center">
+        Registra tu nota, {{ userName }}
+      </h4>
+
+      <div class="mb-3 mt-5">
+        <label for="categoryFor" class="form-label">
+          Categoría
+        </label>
+        <div>
+          <select class="form-select" formControlName="category" aria-label="Disabled select example">
+            <option value="" disabled selected>
+              Seleccione una categoría
+            </option>
+            <option *ngFor="let category of categoriesArray" [value]="category.id">
+              {{ category.name }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="titleFor" class="form-label">
+          Título
+        </label>
+        <input type="text" class="form-control" id="inputTitle" formControlName="title">
+      </div>
+
+      <div class="mb-3">
+        <label for="noteFor" class="form-label">
+          Nota
+        </label>
+        <div>
+          <textarea formControlName="body" rows="3" class="form-control" id="inputBody"></textarea>
+        </div>
+      </div>
+
+      <!-- <fieldset>
+        <label class="form-label">Tags</label>
+        <div class="mt-6 space-y-6">
+          <div
+            *ngFor="let tag of tagsArray"
+            class="relative flex gap-x-3"
+          >
+            <div class="flex h-6 items-center">
+              <input
+                [id]="tag.id"
+                [name]="tag.name"
+                type="checkbox"
+                class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                [checked]="selectedTags.includes(tag)"
+                (change)="toggleTagSelection($event, tag)"
+              >
+            </div>
+            <div class="text-sm leading-6">
+              <label
+                [for]="tag.id"
+                class="font-medium text-gray-900"
+              >
+                {{ tag.name }}
+              </label>
+            </div>
+          </div>
+        </div>
+      </fieldset> -->
+
+      <div class="buttons mb-3 mt-5">
+        <button type="submit" class="btn btn-danger py-2 px-4 rounded" (click)="back()" style="flex: 1;">
+          Cancelar
+        </button>&nbsp;
+        <button type="submit" class="btn btn-primary py-2 px-4 rounded" (click)="save()" [disabled]="!noteForm.valid" style="flex: 1;">
+          Guardar
+        </button>
+      </div>
+    </form>
+  </div>
+</body>

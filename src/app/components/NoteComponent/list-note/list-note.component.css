@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+
+body {
+  font-family: 'Questrial', sans-serif;
+  background: #44426E;
+}
+
+.container {
+  max-width: 1080px;
+}
+
+.title-1 {
+  color: white;
+}
+
+.title-header {
+  max-width: 900px;
+}
+
+.title, .sub-title {
+  color: white;
+}
+
+.link-title {
+  color: rgb(230, 9, 230);
+}
+
+.date {
+  background: #44426E 35%35%;
+}
+
+.category {
+  background: #44426E 35%;
+}
+
+.btn-custom {
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 18px; /* Ajusta el tamaño de fuente según tus necesidades */
+  cursor: pointer;
+  text-decoration: none; /* Agrega subrayado al texto si lo deseas */
+  color: #ffffff; /* Cambia el color del texto si lo deseas */
+}
+
+.writte-btn {
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 18px; /* Ajusta el tamaño de fuente según tus necesidades */
+  cursor: pointer;
+  text-decoration: none; /* Agrega subrayado al texto si lo deseas */
+  color: #c586f9;
+}
+
+.card  {
+  background-color: #44426E;
+}
+.card-header {
+  background: #776483;
+}
+
+.card-body {
+  background: #BBAAB8;
+}
+
+.btn-cst-view, .btn-cst-edit, .btn-cst-delete {
+  width: 800%;
+  height: 30px;
+  border: none;
+  border-radius: 50px;
+}
+
+.btn-cst-view {
+  background: linear-gradient(90deg, #292643 0%, #776483 35%, #BBAAB8 100%);
+}
+
+.btn-cst-edit {
+  background: linear-gradient(90deg, #292643 0%, #776483 35%, #BBAAB8 100%);
+}
+
+.btn-cst-delete {
+  background: linear-gradient(90deg, #292643 0%, #776483 35%, #BBAAB8 100%);
+}
+
+.badge.rounded-pill {
+  color: #BBAAB8;
+}
+
+.titleNote {
+  font-family: 'Sofia', 'sans-serif';
+  font-size: x-large;
+}
+
+.titleBody {
+  font-family: 'Dancing Script', 'sans-serif';
+  font-size: large;
+}
